@@ -31,8 +31,13 @@ It also provides match_tensor_sizes sizes which is used in struct_of_tensor_to_c
 
 ## TODO
 - [ ] full test script including error cases
+  - [ ] roundrobin tests
 - [ ] better speed bencmarking
 - [ ] standard funciton headers including examples
+- [ ] pretty picture to represent conversions
+- [ ] add to fileExchange
+
+
 
 
 
