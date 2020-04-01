@@ -1,4 +1,4 @@
-# matlab structure tensor conversions
+# Matlab Structure Tensor Conversions
 **[Bryce M. Henson](https://github.com/brycehenson)**  
 convert between the various ways tensors(arb. dim. arrays) can be stored in (or interact with) structures  
 **Status:** This Code is **NOT ready for use in other projects**. Unit Testing is **crudely** implemented for functions. Integration/system testing is **not** implemented.
