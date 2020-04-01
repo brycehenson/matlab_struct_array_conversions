@@ -7,8 +7,8 @@ if numel(in_struct)>1
 end
 
     
-field_names = fieldnames(in_struct);
-nfields = numel(field_names);
+field_names_in = fieldnames(in_struct);
+nfields = numel(field_names_in);
 field_cells=struct2cell(in_struct);
 field_cells=match_tensor_sizes(field_cells,'repmat');
 
@@ -16,7 +16,7 @@ cell_sizes=size(field_cells{1});
 ind_max=prod(cell_sizes);
 
 out_tensor=cell(cell_sizes);
-element_template=cell2struct(cell(nfields,1),field_names);
+element_template=cell2struct(cell(nfields,1),field_names_in);
 
 sub_tmp=cell([1,numel(cell_sizes)]);
 for ii=1:ind_max
@@ -24,7 +24,7 @@ for ii=1:ind_max
         [sub_tmp{:}]=ind2sub(cell_sizes,ii);
         for jj=1:nfields
             tensor_tmp=field_cells{jj};
-            element_tmp.(field_names{jj})=tensor_tmp(sub_tmp{:});
+            element_tmp.(field_names_in{jj})=tensor_tmp(sub_tmp{:});
         end
         out_tensor{sub_tmp{:}}=element_tmp;
 end
