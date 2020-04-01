@@ -3,7 +3,7 @@
 convert between the various ways tensors(arb. dim. arrays) can be stored in (or interact with) structures  
 **Status:** This Code is **NOT ready for use in other projects**. Unit Testing is **crudely** implemented for functions. Integration/system testing is **not** implemented.
 
-# <img src="figs/diagram.png" alt="diagram of the conversion between struct-tensor types" width="800"/> 
+# <img src="figs/diagram.png" alt="diagram of the conversion between struct-tensor types" width="1000"/> 
 
 ## Motivation
 matlab has 3 distinct way you can store tensors(arb. dim. arrays) in structures.
