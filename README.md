@@ -3,7 +3,7 @@
 convert between the various ways tensors(arb. dim. arrays) can be stored in (or interact with) structures  
 **Status:** This Code is **NOT ready for use in other projects**. Unit Testing is **crudely** implemented for functions. Integration/system testing is **not** implemented.
 
-| ![diagram of the conversion between struct-tensor types](/figs/figs/diagram.png "Fig1") | 
+| ![diagram of the conversion between struct-tensor types](/figs/diagram.png "Fig1") | 
 |:--:| 
  **Figure 1**- Schematic of the different storage types and how the conversion maps elements.|
 
