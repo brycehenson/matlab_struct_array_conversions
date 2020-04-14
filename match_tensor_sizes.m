@@ -1,6 +1,6 @@
 function cell_of_tensors=match_tensor_sizes(cell_of_tensors,method)
 % matches size of tensors by repeating singleton elements
-% array sizes must match or have size 1 in unmatching dimensions
+% dim sizes must match or have size 1 in unmatching dimensions
 
 if ~strcmp(method,'repmat')
     error('not yet implemented')
