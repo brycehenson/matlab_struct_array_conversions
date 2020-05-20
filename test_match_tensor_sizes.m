@@ -9,3 +9,10 @@ a{6}=rand(tensor_dims(1:2));
 a{7}=rand(tensor_dims(1),1,tensor_dims(3));
 a
 out_cell=match_tensor_sizes(a,'repmat')
+
+
+%%
+out_cell=match_tensor_sizes({1,[2,3,4],[5,6,7]},'repmat')
+
+%%
+[a,b,c]=match_tensor_sizes_multi_in(1,[2,3,4],[5,6,7])

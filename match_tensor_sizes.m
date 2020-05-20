@@ -28,7 +28,9 @@ end
 biger_dimension_size=nan(1,max_dimension);
 for ii=1:max_dimension
     tmp_sizes=unique(tensor_size_mat(:,ii));
-    tmp_sizes(tmp_sizes==1)=[];
+    if numel(tmp_sizes)>1
+        tmp_sizes(tmp_sizes==1)=[];
+    end
     if numel(tmp_sizes)>1 
         error('dimension %u of the tensors cannot be matched',ii)
     end
