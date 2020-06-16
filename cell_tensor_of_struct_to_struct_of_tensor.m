@@ -3,7 +3,7 @@ function out_struct=cell_tensor_of_struct_to_struct_of_tensor(tensor_of_struct,c
 % field sizes must singletons
 % if any fields are missing will replace with nan
 if nargin<2
-    convert_to_mat=true;
+    convert_to_mat=1;
 end
 
 out_struct=struct;
@@ -28,7 +28,7 @@ for ii=1:ind_max
     end
 end
 
-if convert_to_mat
+if convert_to_mat>=1
     for ii=1:numel(out_field_names)
         try
             element_tmp=out_struct.(out_field_names{ii});
@@ -37,7 +37,9 @@ if convert_to_mat
              element_tmp=cell2mat(element_tmp);
             out_struct.(out_field_names{ii})=element_tmp;
         catch
-            fprintf('cant convert field %s to double',out_field_names{ii})
+            if convert_to_mat>=2
+                fprintf('cant convert field %s to double',out_field_names{ii})
+            end
         end
     end
 end

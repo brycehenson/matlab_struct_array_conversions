@@ -7,7 +7,7 @@ function out_struct=struct_tensor_to_struct_of_tensor(struct_tensor_in,convert_t
 % out_struct=struct_tensor_to_struct_of_tensor(test_struct_array)
 
 if nargin<2
-    convert_to_mat=true;
+    convert_to_mat=1;
 end
 
 input_size=size(struct_tensor_in);
@@ -21,7 +21,7 @@ for ii=1:numel(in_field_names)
     out_struct.(in_field_names{ii})=field_values;
 end
 
-if convert_to_mat
+if convert_to_mat>=1
     for ii=1:numel(in_field_names)
         try
         	element_tmp=out_struct.(in_field_names{ii});
@@ -30,7 +30,9 @@ if convert_to_mat
             element_tmp=cell2mat(element_tmp);
             out_struct.(in_field_names{ii})=element_tmp;
         catch
-            fprintf('cant convert field %s to double \n',out_field_names{ii})
+            if convert_to_mat>=2
+                fprintf('cant convert field ''%s'' to double \n',in_field_names{ii})
+            end
         end
     end
 end
