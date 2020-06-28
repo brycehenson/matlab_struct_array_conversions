@@ -35,12 +35,12 @@ This package provides conversions ***(A)*** <-> ***(B)*** and ***(A)*** <-> ***(
 
 It also provides match_tensor_sizes sizes which is used in struct_of_tensor_to_cell_tensor_of_struct to repeat a smaller tensor along its singleton dimensions to match a larger tensor.
 
-## caveats
+All 6 conversions can handle arbitrary dimensionality arrays and structures of any depth.
 
 
 ## TODO
 - [ ] full test script including error cases
-  - [ ] roundrobin tests
+  - [x] roundrobin tests
 - [ ] option in struct_of_tensor_to_cell_tensor_of_struct to use nan instead of repeating along singleton dim.
 - [ ] better speed bencmarking
 - [ ] standard funciton headers including examples
