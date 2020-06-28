@@ -2,6 +2,7 @@
 **[Bryce M. Henson](https://github.com/brycehenson)**  
 convert between the various ways n-dimensional arrays (sometimes called tensors) can be stored in (or interact with) structures  
 **Status:** This Code is **ready** for use in other projects. Unit Testing is implemented. Round-Robin testing is implemented and **passing**.
+[![View matlab_struct_array_conversions on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/77440-matlab_struct_array_conversions)
 
 | ![diagram of the conversion between struct-tensor types](/figs/diagram.png "Fig1") | 
 |:--:| 
