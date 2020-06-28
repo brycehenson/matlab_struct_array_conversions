@@ -24,11 +24,11 @@ Each has their own advantages, fustration and quirks. Conventions (including in 
 
 ## Code
 This package provides conversions ***(A)*** <-> ***(B)*** and ***(A)*** <-> ***(C)***
-- (***(B)*** -> ***(A)***) cell_tensor_of_struct_to_struct_of_tensor
-- (***(A)*** -> ***(B)***) struct_of_tensor_to_cell_tensor_of_struct
+- (***(B)*** -> ***(A)***) cell_array_of_struct_to_struct_of_array
+- (***(A)*** -> ***(B)***) struct_of_array_to_cell_array_of_struct
 
-- (***(C)*** -> ***(A)***) struct_tensor_to_struct_of_tensor
-- (***(A)*** -> ***(C)***)  struct_of_tensor_to_struct_tensor
+- (***(C)*** -> ***(A)***) struct_array_to_struct_of_array
+- (***(A)*** -> ***(C)***)  struct_of_array_to_struct_array
 
 It also provides match_tensor_sizes sizes which is used in struct_of_tensor_to_cell_tensor_of_struct to repeat a smaller tensor along its singleton dimensions to match a larger tensor.
 
