@@ -9,14 +9,14 @@ convert between the various ways n-dimensional arrays (sometimes called tensors)
 
 ## Motivation
 matlab has 3 distinct way you can store n-dimensional arrays (aka tensors, multidimendional arrays, or nd-array) in structures.
-- ***(A)*** structure with an nd-array in each field (aka. struct of tensors)
+- ***(A)*** structure with an nd-array in each field (aka. struct of tensors) (fig.1 right)
   - I think this is the easiest to work with
   - it does not enforce dimension matching things can go wrong if you not carefull about building/ modifying each field
   - acess and creation is the simplest
-- ***(B)*** Cell nd-array of structures
+- ***(B)*** Cell nd-array of structures (fig.1 top left)
   - this is the most flexible as the cell in each nd-array can have completely different fields
   - it is very difficult to query as you must handle the possibly different fields present
-- ***(C)*** structure nd-array(tensor)
+- ***(C)*** structure nd-array(tensor) (fig.1 bottom left)
   - this can be hard to build as it is pretty difficult to set multiple values at the same time.
   - the reult of queries do not preserve dimensionality eg ```test_struct_array(1,1:2,1:3).data1```
 
