@@ -1,9 +1,13 @@
-function out_struct=cell_tensor_of_struct_to_struct_of_tensor(tensor_of_struct,convert_to_mat)
+function out_struct=cell_tensor_of_struct_to_struct_of_tensor(tensor_of_struct,convert_to_num_arr,convert_single_cell_arr)
 %https://au.mathworks.com/matlabcentral/fileexchange/40712-convert-from-a-structure-of-arrays-into-an-array-of-structures
 % field sizes must singletons
 % if any fields are missing will replace with nan
 if nargin<2
-    convert_to_mat=true;
+    convert_to_num_arr=true;
+end
+
+if nargin<3
+    convert_single_cell_arr=true;
 end
 
 out_struct=struct;
@@ -28,7 +32,8 @@ for ii=1:ind_max
     end
 end
 
-if convert_to_mat
+% try to convert the cell array into a numerical array
+if convert_to_num_arr
     for ii=1:numel(out_field_names)
         try
             element_tmp=out_struct.(out_field_names{ii});
@@ -41,6 +46,21 @@ if convert_to_mat
         end
     end
 end
+
+if convert_single_cell_arr
+    if ~convert_to_num_arr
+        error('must also select convert_to_num_arr')
+    end
+    for ii=1:numel(out_field_names)
+            element_tmp=out_struct.(out_field_names{ii});
+            if iscell(element_tmp)
+                element_tmp=un_nest_cell_array(element_tmp);
+                out_struct.(out_field_names{ii})=element_tmp;
+            end
+    end
+end
+
+
 
 
 end

@@ -14,9 +14,9 @@
    viewBox="0 0 208.05075 145.77193"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="logo.svg"
-   inkscape:export-filename="D:\Dropbox\UNI\projects\programs\matlab_struct_tensor_conversions\fig\diagram.png"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="diagram.svg"
+   inkscape:export-filename="D:\Dropbox\UNI\projects\programs\matlab_struct_tensor_conversions\figs\diagram.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -194,11 +194,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="412.50031"
-     inkscape:cy="301.79002"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="463.46709"
+     inkscape:cy="241.43577"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g12237"
      showgrid="false"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-intersection-paths="true"
@@ -206,8 +206,8 @@
      inkscape:snap-midpoints="true"
      inkscape:snap-object-midpoints="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1147"
-     inkscape:window-x="1912"
+     inkscape:window-height="1137"
+     inkscape:window-x="5752"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:measure-start="0,0"
@@ -224,7 +224,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2086,7 +2086,7 @@
          x="154.67252"
          y="10.314121"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944466px;font-family:cmr10;-inkscape-font-specification:cmr10;text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan12118">Struct of Tensors</tspan></text>
+         id="tspan12118">Struct of Arrays</tspan></text>
     <g
        id="g12237"
        transform="matrix(1.0928083,0,0,1.0928083,-21.776887,-26.817811)">
@@ -2268,7 +2268,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:cmr10;-inkscape-font-specification:cmr10;text-align:center;text-anchor:middle;stroke-width:0.26458332"
            y="40.975349"
            x="186.61082"
-           sodipodi:role="line">Matrix</tspan></text>
+           sodipodi:role="line">Array</tspan></text>
     </g>
     <g
        id="g12381"
