@@ -19,9 +19,10 @@ matlab has 3 distinct way you can store n-dimensional arrays (aka tensors, multi
 - ***(C)*** structure nd-array(tensor) (fig.1 bottom left)
   - this can be hard to build as you cant set multiple values at the same time.
   - the reult of queries do not preserve dimensionality eg ```test_struct_array(1,1:2,1:3).data1```
-  - **For your own sanity i discourage this format unless you need to guarantee that the fields exist for every elements**
-  
+  - this format is very confusing to work with and leads to some pretty slow approaches (both in dev time and computer time).
+  - **For your own sanity i discourage this format**
 
+  
 Each has their own advantages, fustration and quirks. Conventions (including in matlab) vary and we would like a way to convert between these formats.
 
 ## Code
