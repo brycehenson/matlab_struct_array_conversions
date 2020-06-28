@@ -1,7 +1,7 @@
 # Matlab Structure (nd)Array Conversions
 **[Bryce M. Henson](https://github.com/brycehenson)**  
 convert between the various ways n-dimensional arrays (sometimes called tensors) can be stored in (or interact with) structures  
-**Status:** This Code is **NOT ready for use in other projects**. Unit Testing is **crudely** implemented for functions. Integration/system testing is **not** implemented.
+**Status:** This Code is **ready** for use in other projects. Unit Testing is implemented. Round-Robin testing is implemented and **passing**.
 
 | ![diagram of the conversion between struct-tensor types](/figs/diagram.png "Fig1") | 
 |:--:| 
@@ -31,6 +31,9 @@ This package provides conversions ***(A)*** <-> ***(B)*** and ***(A)*** <-> ***(
 - (***(A)*** -> ***(C)***)  struct_of_array_to_struct_array
 
 It also provides match_tensor_sizes sizes which is used in struct_of_tensor_to_cell_tensor_of_struct to repeat a smaller tensor along its singleton dimensions to match a larger tensor.
+
+## caveats
+
 
 ## TODO
 - [ ] full test script including error cases

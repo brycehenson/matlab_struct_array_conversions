@@ -193,7 +193,26 @@ out_st_of_arr=struct_array_to_struct_of_array(out_st_arr,1,1)
 check_that_st_of_arr_are_the_same(test_st_of_arr,out_st_of_arr)
 
 
+%% now we will have a look at deeper structures
 
+array_dims=[3,4,3];
+test_st_of_arr=[];
+test_st_of_arr.data1.val=rand(array_dims);
+test_st_of_arr.data1.unc=rand(array_dims);
+test_st_of_arr.data2=rand(array_dims);
+test_st_of_arr.data2(1,1)=nan;
+test_st_of_arr.data3=rand(array_dims)>0.5;
+test_st_of_arr.data4=num2cell(rand(array_dims));
+test_st_of_arr.data4{1,1}='a';
+test_st_of_arr.data5=6;
+test_st_of_arr.data6=rand(array_dims(1:2));
+test_st_of_arr.data7=rand(array_dims(1),1,array_dims(3));
+test_st_of_arr.data8=num2cell(rand(array_dims));
+
+out_st_of_arr=struct_of_array_to_cell_array_of_struct(test_st_of_arr);
+
+%%
+cell_array_of_struct_to_struct_of_array(out_st_of_arr) 
 
 %% 
 
@@ -254,6 +273,7 @@ for ii=1:numel(field_names_a)
 end
 
 end 
+
 
 
 
