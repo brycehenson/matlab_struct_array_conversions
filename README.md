@@ -38,7 +38,7 @@ It also provides match_tensor_sizes sizes which is used in struct_of_tensor_to_c
 - [ ] option in struct_of_tensor_to_cell_tensor_of_struct to use nan instead of repeating along singleton dim.
 - [ ] better speed bencmarking
 - [ ] standard funciton headers including examples
-- [ ] pretty picture to represent conversions
+- [x] pretty picture to represent conversions
 - [ ] add to fileExchange
 
 
