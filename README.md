@@ -8,22 +8,22 @@ convert between the various ways n-dimensional arrays (sometimes called tensors)
  **Figure 1**- Schematic of the different storage types and how the conversion maps elements.|
 
 ## Motivation
-matlab has 3 distinct way you can store n-dimensional arrays (aka tensors, multidimendional arrays, or nd-array) in structures.
+matlab has 3 distinct way you can store n-dimensional arrays (aka tensors, multidimensional arrays, or nd-array) in structures.
 - ***(A)*** structure with an nd-array in each field (aka. struct of tensors) (fig.1 right)
   - I think this is the easiest to work with
-  - it does not enforce dimension matching things can go wrong if you not carefull about building/ modifying each field
-  - acess and creation is the simplest
+  - it does not enforce dimension matching things can go wrong if you not careful about building/ modifying each field
+  - access and creation is the simplest
 - ***(B)*** Cell nd-array of structures (fig.1 top left)
   - this is the most flexible as the cell in each nd-array can have completely different fields
   - it is very difficult to query as you must handle the possibly different fields present
 - ***(C)*** structure nd-array(tensor) (fig.1 bottom left)
   - this can be hard to build as you cant set multiple values at the same time.
-  - the reult of queries do not preserve dimensionality eg ```test_struct_array(1,1:2,1:3).data1```
+  - the result of queries do not preserve dimensionality eg ```test_struct_array(1,1:2,1:3).data1```
   - this format is very confusing to work with and leads to some pretty slow approaches (both in dev time and computer time).
   - **For your own sanity i discourage this format**
 
   
-Each has their own advantages, fustration and quirks. Conventions (including in matlab) vary and we would like a way to convert between these formats.
+Each has their own advantages, frustration and quirks. Conventions (including in matlab) vary and we would like a way to convert between these formats.
 
 ## Code
 This package provides conversions ***(A)*** <-> ***(B)*** and ***(A)*** <-> ***(C)***
