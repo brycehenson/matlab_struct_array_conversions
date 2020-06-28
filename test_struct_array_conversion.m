@@ -174,7 +174,8 @@ end
 
 array_dims=[3,4,3];
 test_st_of_arr=[];
-test_st_of_arr.data1=rand(array_dims);
+test_st_of_arr.data1.val=rand(array_dims);
+test_st_of_arr.data1.unc=rand(array_dims);
 test_st_of_arr.data2=rand(array_dims);
 test_st_of_arr.data2(1,1)=nan;
 test_st_of_arr.data3=rand(array_dims)>0.5;
