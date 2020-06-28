@@ -35,6 +35,7 @@ if ~isequal(size(out_st_of_arr),array_dims)
     error('sizes are not the same')
 end
 
+
 % lets go through each field/element and check that the values are equal
 field_names=fields(test_st_of_arr);
 kkmax=prod(array_dims); %max linear index of he array
@@ -138,7 +139,6 @@ for ii=1:iimax
         end
         % if not nan or empty
         if ~isempty(single_element) && (isnumeric(single_element) && ~isnan(single_element) )
-
             single_element_in=test_cell_arr_of_st{index_test_cell{:}}.(field_names{ii});  
             if ~isequal(single_element_in,single_element)
                 error('not equal')
