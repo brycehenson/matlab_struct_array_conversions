@@ -1,4 +1,4 @@
-function out_struct=cell_array_of_struct_to_struct_of_array(array_of_struct,convert_to_num_arr,convert_single_cell_arr)
+function out_struct=cell_array_of_struct_to_struct_of_array(array_of_struct,convert_to_num_arr,convert_single_cell_arr,verbose)
 % convert a cell array of structures to a structure of (nd)arrays 
 % the arrays in the structure will be empty if the coresponding location in the origianl cell array is empty
 % this function can handle full nested strucutes
@@ -8,13 +8,16 @@ function out_struct=cell_array_of_struct_to_struct_of_array(array_of_struct,conv
 %https://au.mathworks.com/matlabcentral/fileexchange/40712-convert-from-a-structure-of-arrays-into-an-array-of-structures
 % field sizes must singletons
 % if any fields are missing will replace with nan
-if nargin<2
+if nargin<2 || isempty(convert_to_num_arr)
     convert_to_num_arr=true;
 end
-
-if nargin<3
+if nargin<3 || isempty(convert_single_cell_arr)
     convert_single_cell_arr=true;
 end
+if nargin<4 || isempty(verbose)
+    verbose=1;
+end
+
 
 
 out_field_paths= cell(0,1);%fieldnames(out_struct);
@@ -58,7 +61,9 @@ if convert_to_num_arr
             out_field_vals{ii}=element_tmp;
         catch
             tmp_path=out_field_paths{ii};
-            fprintf('cant convert field %s to double\n',strjoin(tmp_path(:),','))
+            if verbose>0
+                fprintf('cant convert field %s to double\n',strjoin(tmp_path(:),','))
+            end
         end
     end
 end
