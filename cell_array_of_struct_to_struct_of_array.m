@@ -30,6 +30,9 @@ ind_max=prod(size_tensor);
 for ii=1:ind_max
     [sub_tmp{:}]=ind2sub(size_tensor,ii);
     element_struct_tmp=array_of_struct{sub_tmp{:}};
+    if ~isstruct(element_struct_tmp)
+        error('not a structure')
+    end
     [field_paths,field_vals]=struct_field_paths_elements_flatten(element_struct_tmp);
     for jj=1:numel(field_paths)
         field_paths_match=cellfun(@(x) isequal(x,field_paths{jj}),out_field_paths);
